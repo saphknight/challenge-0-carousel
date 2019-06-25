@@ -1,9 +1,8 @@
-const imgs = ['hero-image-0.jpg', 'hero-image-1.jpg', 'hero-image-2.jpg', 'hero-image-3.jpg', 'not-found.jpg'];
-carousel();
+var imageCarousel = function () {
+    var imgs = ['hero-image-0.jpg', 'hero-image-1.jpg', 'hero-image-2.jpg', 'hero-image-3.jpg', 'not-found.jpg'];
 
-function carousel() {
-    let i = 0;
-    const div = document.getElementsByClassName("image")[0];
+    var i = 0;
+    var div = document.getElementsByClassName("image")[0];
     setInterval(() => {
         div.style.backgroundImage = `url(./images/${imgs[i]})`
         i++;
@@ -11,4 +10,4 @@ function carousel() {
             i = 0;
         }
     }, 1000);
-}
+}();
